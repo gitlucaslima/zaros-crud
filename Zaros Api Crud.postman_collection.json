@@ -1,0 +1,92 @@
+{
+	"info": {
+		"_postman_id": "7521fa32-3754-49a2-90da-d950ab71a285",
+		"name": "Zaros Api Crud",
+		"description": "Documentação dos endpoitns disponiveis na api do desafio técnico da zaros",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "31086810",
+		"_collection_link": "https://interstellar-equinox-253686.postman.co/workspace/New-Team-Workspace~6d3e64e8-852e-4aee-a2dd-6f070051e32d/collection/31086810-7521fa32-3754-49a2-90da-d950ab71a285?action=share&source=collection_link&creator=31086810"
+	},
+	"item": [
+		{
+			"name": "user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nome\": \"teste0002\",\r\n  \"email\": \"teste2@gmail.com\",\r\n  \"idade\": \"24\",\r\n  \"ativo\": \"true\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/api/users"
+			},
+			"response": []
+		},
+		{
+			"name": "user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/users?email=baba@gmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "baba@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/api/users/116d6c0f-8160-4878-b720-1c3257b5214a"
+			},
+			"response": []
+		},
+		{
+			"name": "user",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"Novo teste02\",\r\n    \"email\": \"Novoteste02@teste01.com\",\r\n    \"idade\": 22,\r\n    \"ativo\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/api/users/116d6c0f-8160-4878-b720-1c3257b5214a"
+			},
+			"response": []
+		},
+		{
+			"name": "user",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:3000/api/users/1889dbf3-ebdf-4c5a-a150-70b88b70f1c3"
+			},
+			"response": []
+		}
+	]
+}
